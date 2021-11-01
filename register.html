@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="public/css/style.css" />
+    <title>Register</title>
+  </head>
+  <body>
+    <main>
+      <section id="header">
+        <div class="header">
+          <h1>Online Shopee</h1>
+        </div>
+      </section>
+      <nav id="menu">
+        <ul class="menu-ul">
+          <li><a href="./index.html">HOME</a></li>
+          <li><a href="">PRODUCTS</a></li>
+          <li><a href="">SHOPS</a></li>
+          <li><a href="">REGISTER</a></li>
+          <li><a href="">SIGNIN</a></li>
+        </ul>
+      </nav>
+      <form action="" class="form-register" id="myForm">
+        <div class="header">
+          <h1>Member Information</h1>
+        </div>
+        <div class="form-content">
+          <div class="form-group">
+            <div class="form-label">
+              <label for="fullname">FullName: </label>
+            </div>
+            <div class="form-input">
+              <input id="fullname" type="text" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="form-label"><label for="">Gender: </label></div>
+            <div class="form-input">
+              <div
+                id="gender"
+                class="form-group"
+                style="justify-content: flex-start; margin-left: 0"
+              >
+                <div
+                  style="margin-right: 20px; display: flex; align-items: center"
+                >
+                  <label for="" style="margin-right: 5px">Male</label>
+                  <input type="radio" id="male" name="gender" value="Male" />
+                </div>
+                <div style="display: flex; align-items: center">
+                  <label for="" style="margin-right: 5px">Female</label>
+                  <input
+                    type="radio"
+                    id="female"
+                    name="gender"
+                    value="FeMale"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="form-label"><label for="">Hobbies: </label></div>
+            <div class="form-input">
+              <div
+                id="hobbies"
+                class="form-group"
+                style="justify-content: space-between; margin-left: 0"
+              >
+                <div style="display: flex; align-items: center">
+                  <label for="" style="margin-right: 5px">Shopping</label>
+                  <input
+                    type="checkbox"
+                    id="Shopping"
+                    name="Shopping"
+                    value="Shopping"
+                  />
+                </div>
+                <div style="display: flex; align-items: center">
+                  <label for="" style="margin-right: 5px">Eating Out</label>
+                  <input
+                    type="checkbox"
+                    id="Eating Out"
+                    name="Eating Out"
+                    value="Eating Out"
+                  />
+                </div>
+                <div style="display: flex; align-items: center">
+                  <label for="" style="margin-right: 5px">Sporting</label>
+                  <input
+                    type="checkbox"
+                    id="Sporting"
+                    name="Sporting"
+                    value="Sporting"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="form-label">
+              <label for="address">Date of Birth: </label>
+            </div>
+            <div class="form-input">
+              <input type="date" id="date-input" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="form-label">
+              <label for="address">Address: </label>
+            </div>
+            <div class="form-input">
+              <input type="text" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="form-label">
+              <label for="email">Email</label>
+            </div>
+            <div class="form-input">
+              <input
+                type="email"
+                required
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+              />
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="form-label">
+              <label for="phone">Phone Number: </label>
+            </div>
+            <div class="form-input">
+              <input type="tel" required pattern="[0-9]{10}" />
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="form-label">
+              <label for="city-select">City: </label>
+            </div>
+            <div class="form-input">
+              <select name="city-select" id="city-select" required>
+                <option value="saigon">Saigon</option>
+                <option value="hanoi">Hanoi</option>
+                <option value="hue">Hue</option>
+                <option value="da Nang">Da Nang</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="form-label">
+              <label for="comment">Comment: </label>
+            </div>
+            <div class="form-input">
+              <textarea name="comment" id="Comment" cols="100" rows="10">
+              </textarea>
+            </div>
+          </div>
+          <div class="form-group">
+            <div style="margin: auto">
+              <button id="button-form" type="submit">Submit</button>
+              <button type="reset" id="reset">Reset</button>
+            </div>
+          </div>
+        </div>
+      </form>
+      <!-- The Modal -->
+      <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h4>This page says:</h4>
+          <br />
+          <p>Member Infomation</p>
+          <p>------------------</p>
+          <p></p>
+          <p></p>
+          <p></p>
+          <p></p>
+          <p></p>
+          <p></p>
+          <p></p>
+          <p></p>
+          <p></p>
+        </div>
+      </div>
+    </main>
+    <script src="public/js/script.js"></script>
+  </body>
+</html>

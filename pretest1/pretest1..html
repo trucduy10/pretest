@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         header {
+            display: block;
+            margin-bottom: 0.8em;
+        }
+        
+        h2 {
+            background-color: rgb(0, 153, 0);
+            color: rgb(224, 255, 224);
+            font-weight: lighter;
+            text-shadow: 1px 1px 1px blue;
+            margin: 0;
+            margin-bottom: 0.4em;
+            padding-bottom: 0.3em;
+            text-align: center;
+        }
+        a {
+            display: block;
+            text-decoration: none;
+            text-align: center;
+            float: left;
+            min-width: 20%;
+            font-weight: bold;
+            font-size: x-small;
+            padding-top: 0.4em;
+            padding-bottom: 0.3em;
+        }
+        
+        nav {
+            text-shadow: 0.5px 0.2px 1px rgba(0, 0, 255, 0.61);
+            border-top: black 1.7px solid;
+            border-bottom: black 1.7px solid;
+            width: 100%;
+            overflow: hidden;
+        }
+        body{
+            border: blue solid thin;
+            font-family: 'Times New Roman', Times, serif;
+        }
+       
+        *{
+            font-family: 'Times New Roman', Times, serif;
+        }
+        form{
+            margin: 1rem;
+        }
+        div{
+            padding: 0.3rem;
+        }
+        label{
+           display: inline-block;
+           width: 15rem;
+        }
+
+        input:required{
+            border: red solid thin;
+        }
+
+    </style>
+
+</head>
+<body>
+    <header>
+        <h2>Online Shopee</h2>
+        <nav>
+            <a href="">HOME</a>
+            <a href="">PRODUCTS</a>
+            <a href="">SHOPS</a>
+            <a href="pretest1.figure2.html">REGISTER</a>
+            <a href="">SIGNIN</a>
+        </nav>
+    </header>
+
+    <form action="pretest1.figure2.html">
+        <div>
+            <label for="">Fullname</label>
+            <input type="text" name="user" id="user" value="input..." required>
+        </div>
+
+        <div>
+            <label for="">Gender </label>
+            <input type="radio" name="password" id="password"> Male
+            <input type="radio" name="password" id="password"> Female
+        </div>
+
+        <div>
+            <label for="">Hobbies </label>
+            <input type="checkbox" name="Shopping" id="Shopping"> Shopping
+            <input type="checkbox" name="Eating out" id="Eating out"> Eating out
+            <input type="checkbox" name="Sporting" id="Sporting"> Sporting
+        </div>
+
+        <div>
+            <label for="">Date of Birth</label>
+            <input type="date" name="dob" id="dob"
+            min="1980-01-31" max="2022-01-01">
+        </div>
+
+        <div>
+            <label for="">Address</label>
+            <input type="text" name="add" id="add" value="input..." required>
+        </div>
+
+        <div>
+            <label for="">Email</label>
+            <input type="text" name="email" id="email" value="input..." required>
+        </div>
+
+        <div>
+            <label for="">Phone Number</label>
+            <input type="number" name="number" id="number" value="" required>
+        </div>
+
+        <div>
+            <label for=""> City</label>
+            <select name="city" id="city">
+                <option value="SG">Saigon</option>
+                <option value="Hue">Hue</option>
+                <option value="HN">Hanoi</option>
+                <option value="DN">Danang</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="">Comment</label>
+            <textarea type="text" name="comment" id="comment" cols="50" rows="5">
+            Comment here</textarea>
+        </div>
+
+        <div>
+            
+            <input type="Submit" value="Submit">
+            <input type="Reset" value="Reset">
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        *{
+            font-family: 'Times New Roman', Times, serif;
+        }
+        header h2,p{
+            color: blue;
+        }
+
+
+        input:required,
+        select:required {
+            border: red thin solid;
+            border-radius: 3px;
+            width: 65%;
+        }
+
+        table {
+            position: relative; /*dinh dang tuyet doi*/ 
+            margin: 0.5em auto;
+            width: 65%;
+        }
+
+        label{
+            display: inline-block;
+            width: 7rem;
+            text-align: right;
+        }
+        
+        td:first-child{
+            text-align: center;
+            padding-left: 1em;
+        }
+        td:last-child{
+            text-align: left;
+        }
+        tr:last-child td{
+            text-align: center;
+            padding-top: 1em;
+        }
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <h2 style="text-align: center;">REGISTRATION FORM</h2>
+        <p>Notes:</p>
+        <ol>
+            <li>Fields with(<span style="color: red;">*</span>)</li>
+            <li>Login name have no spaces</li>
+        </ol>
+    </header>
+
+    <div>
+        
+         <form action="/Pretest/pretest2/pretest2.figure1.html" id="registration">
+             <table>
+                <tr>
+                    <td>
+                        <label for="name">Login name <span style="color: red;">*</span></label>
+                    </td>
+                    <td>
+                        <input type="text" name="name" id="name" minlength="5" required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="pass">Password <span style="color: red;">*</span></label>
+                    </td>
+                    <td>
+                        <input type="password" name="pass" id="pass" minlength="5" required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="passc">Password Confirm<span style="color: red;">*</span></label>
+                    </td>
+                    <td>
+                        <input type="password" name="passc" id="passc" minlength="5" required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="fname">Full name<span style="color: red;">*</span></label>
+                    </td>
+                    <td>
+                        <input type="text" name="fname" id="fname" required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="add">Address<span style="color: red;">*</span></label> 
+                    </td>
+                    <td>
+                        <input type="text" name="add" id="add"  required> 
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="email">Email<span style="color: red;">*</span></label>
+                    </td>
+                    <td>
+                        <input type="text" name="email" id="email" placeholder="xxx@xxx.xxx" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="sex">Sex</label>
+                    </td>
+                    <td>
+                        <input type="radio" name="sex" id="sex" value="Male"> Male
+                        <input type="radio" name="sex" id="sex" value="Female"> Female
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="dob">Date of birth</label>
+                    </td>
+
+                    <td>
+                        <select name="day" id="day">
+                            <option value="1">01</option>
+                        </select>
+                        <strong>/</strong>
+                        <select name="month" id="month">
+                            <option value="1">01</option>
+                        </select>
+                        <strong>/</strong>
+                        <select name="year" id="year">
+                            <option value="1989">1989</option>
+                        </select>
+                        <span id="leap_year" style="visibility:hidden;">
+                            <i class="material-icons" style="font-size: x-small; color: crimson;" >>&#xe86c;</i>
+                            Leap year
+                        </span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label for="country">Country</label></td>
+                    <td>
+                        <select name="city" id="city">
+                            <option value="SGN">Ho Chi Minh City</option>
+                            <option value="HAN">Ha Noi</option>
+                            <option value="DAD">Da Nang</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="">Phone number</label>
+                    </td>
+                    <td>
+                        <input type="number" name="phone" id="phone" minlength="10" maxlength="12" pattern="[0-9]{}" >
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="hobbies">Hobbies</label>
+                    </td>
+                    <td>
+                        <input type="checkbox" name="hobbies" id="hobbie1" value="Swimming">Swimming
+                        <input type="checkbox" name="hobbies" id="hobbie2" value="Dancing">Dancing
+                        <input type="checkbox" name="hobbies" id="hobbie3" value="Shopping">Shopping
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="comment">Comment</label>
+                    </td>
+                    <td>
+                        <textarea name="comment" id="comment" cols="45" rows="5"></textarea>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="2">
+                        <input type="submit" value="Submit">
+                        <input type="reset" value="Reset">
+                    </td>
+                </tr>
+             </table>
+        </form> 
+    </div>
+    <script>
+        var dayObj = document.getElementById("day");
+        var monthObj = document.getElementById("month");
+        var isLeap = false;
+
+        window.onload = function() {
+            setYear();
+            setMonth();
+        }
+        document.getElementById("year").onchange = function() {
+            checkLeapYear();
+            checkDay();
+        }
+
+        monthObj.onchange = function() {
+            checkDay();
+        }
+        dayObj.onfocus = function() {
+            setDay();
+        }
+
+        function checkDay() { // Check the day is valid or not
+            var month = monthObj.value;
+            var day = dayObj.value;
+            if (month == 2) {
+                if (isLeap) {
+                    if (day > 29) {
+                        setDay();
+                    }
+                } else {
+                    if (day > 28) {
+                        setDay();
+                    }
+                }
+            } else if (month == 4 || month == 6 || month == 9 || month == 11) {
+                if (day > 30) {
+                    setDay();
+                }
+            }
+        }
+
+        function setDay() { // Set the day to the first day of the month
+            dayObj.innerHTML = "";
+            let month = monthObj.value;
+            let maxDay = 31;
+            if (month == 2) {
+                if (isLeap) {
+                    maxDay = 29;
+                } else {
+                    maxDay = 28;
+                }
+            } else if (month == 4 || month == 6 || month == 9 || month == 11) {
+                maxDay = 30;
+            }
+
+            for (let i = 1; i <= maxDay; i++)
+                if (i < 10) {
+                    dayObj.innerHTML += "<option value='" + i + "'>0" + i + "</option>"
+                } else {
+                    dayObj.innerHTML += "<option value='" + i + "'>" + i + "</option>";
+                }
+        }
+
+        function setMonth() {
+            for (let i = 1; i <= 12; i++) {
+                if (i < 10) {
+                    monthObj.innerHTML += "<option value='" + i + "'>0" + i + "</option>"
+                } else {
+                    monthObj.innerHTML += "<option value='" + i + "'>" + i + "</option>";
+                }
+            }
+        }
+
+        function setYear() {
+
+            for (let i = 2012; i >= 1920; i--) {
+                document.getElementById("year").innerHTML += "<option value='" + i + "'>" + i + "</option>";
+            }
+        }
+
+        function checkLeapYear() {
+
+            var year = document.getElementById("year").value;
+            if (year % 4 == 0) {
+                if (year % 100 == 0) {
+                    if (year % 400 == 0)
+                        isLeap = true;
+                    else
+                        isLeap = false;
+                } else
+                    isLeap = true;
+            } else {
+                isLeap = false;
+            }
+
+            if (isLeap) {
+                document.getElementById("leap_year").style.visibility = "visible";
+            } else {
+                document.getElementById("leap_year").style.visibility = 'hidden';
+            }
+        }
+
+
+        document.getElementById("registration").onsubmit = function (){
+            let pass = document.getElementById("pass").value;
+            let passc = document.getElementById("passc").value;
+            if (pass !== passc){
+                alert("Password should be same as Password Confirm");
+                document.getElementById("passc").focus();
+                return false;
+            } else{
+                alert("Welcome to Education Web");
+            }
+        }
+
+       
+    </script>
+    
+</body>
+</html>

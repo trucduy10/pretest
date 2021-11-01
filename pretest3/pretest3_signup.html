@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="readValue()">
+    <h2>Student Infomation Sucessful Registration</h2>
+
+    <table>
+        <tr>
+            <td>Name</td>
+            <td id="fname"></td>
+        </tr>
+        <tr>
+            <td>Gender</td>
+            <td id="gender"></td>
+        </tr>
+        <tr>
+            <td>Address</td>
+            <td id="add"></td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td id="email"></td>
+        </tr>
+        <tr>
+            <td>Phone</td>
+            <td id="phone"></td>
+        </tr>
+        <tr>
+            <td>Qualification</td>
+            <td id="qual"></td>
+        </tr>
+    </table>
+   
+    <footer><a href="/Pretest/pretest3/pretest3.2.html">Click here to return to Student Page</a></footer>
+</body>
+<script>
+    function readValue() {
+        document.getElementById("fname").innerHTML = sessionStorage.getItem("fname");
+        document.getElementById("gender").innerHTML = sessionStorage.getItem("gender");
+        document.getElementById("add").innerHTML = sessionStorage.getItem("add");
+        document.getElementById("email").innerHTML = `<a href = "#">${sessionStorage.getItem("email")}</a>` ;
+        document.getElementById("phone").innerHTML = sessionStorage.getItem("phone");
+        document.getElementById("qual").innerHTML = sessionStorage.getItem("qual");
+}
+</script>
+</html>
