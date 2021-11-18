@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+    <style>
+tr{
+    border: black solid thin;
+}
+h3{
+    text-align: center;
+}
+/* table.table-bordereds.table-striped.table-hover{
+    position: relative; 
+    margin: 0.5em auto;
+    width: 65%;
+    
+} */
+form{
+    position: relative; 
+    margin: 0.5em auto;
+    width: 65%;
+}
+    </style>
+</head>
+
+<body ng-app="myApp">
+    <div class="container" ng-controller="mainCTR">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th><a href="#/!">Home</a></th>
+                    <th><a href="#!food">Food</a></th>
+                    <th><a href="#!add">Add New Food</a></th>
+                    <th><a href="#/!">About</a></th>
+                </tr>
+            </thead>
+        </table>
+        <div ng-view></div>
+        <script>
+            var app = angular.module("myApp", ["ngRoute"]);
+
+            app.config(function($routeProvider) {
+                $routeProvider
+                    .when("/food", {
+                        templateUrl: "p_food.html"
+                    })
+                    .when("/add", {
+                        templateUrl: "p_add.html",
+                        controller: "addCTR"
+                    });
+            });
+            app.controller("mainCTR", function($scope, $http) {
+                $http.get("food.json").then(function(response) {
+                    $scope.list = response.data;
+                });
+            });
+            app.controller("addCTR", function($scope) {
+                $scope.addRow = function() {
+                    alert("Add new food successfully");
+                    $scope.list.push({
+                        id: $scope.id,
+                        name: $scope.name,
+                        price: $scope.price,
+                    });
+                };
+            });
+        </script>
+    </div>
+    <footer style="text-align: center;"> Copyright &copy;. All rights reserved.</footer>
+</body>
+
+
+</html>
